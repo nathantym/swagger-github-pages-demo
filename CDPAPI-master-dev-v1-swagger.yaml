@@ -10,7 +10,28 @@ schemes:
 paths:
   /column_mapper:
     get:
-      responses: {}
+      responses: {
+        "data": [
+          {
+            "Backend Name": "self_firmo_employeeCount___",
+            "Display Name": "Employee Count ",
+            "FILTER_COLUMN": "Y",
+            "NUMERIC_TYPE": "#",
+            "NUMERIC_PRECISION": 0,
+            "Display Header": "Firmographics",
+            "Display Rank": 1
+          },
+          {
+            "Backend Name": "child_firmo_largestSubsEmployeesAsPct___",
+            "Display Name": "Largest Subsidiary as a % of Employees",
+            "FILTER_COLUMN": "Y",
+            "NUMERIC_TYPE": "%",
+            "NUMERIC_PRECISION": 0,
+            "Display Header": "Firmographics",
+            "Display Rank": 2
+          }
+        ]
+      }
       security:
       - sigv4: []
     options:
