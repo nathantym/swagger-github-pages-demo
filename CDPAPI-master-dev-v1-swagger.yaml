@@ -1,0 +1,359 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "CDPAPI"
+host: "705f9de3u9.execute-api.eu-west-1.amazonaws.com"
+basePath: "/master-dev-v1"
+schemes:
+- "https"
+paths:
+  /column_mapper:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /company_profile:
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /company_profile/ma/{bainId}:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /company_profile/multiyear/{bainId}:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /company_profile/news/{bainId}:
+    get:
+      parameters:
+      - name: "topic_grouping"
+        in: "query"
+        required: false
+        type: "string"
+      - name: "end_date"
+        in: "query"
+        required: false
+        type: "string"
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /company_profile/subsidiaries/{bainId}:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /filters:
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /filters/custom:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /filters/custom/{custom_filter}:
+    put:
+      responses: {}
+      security:
+      - sigv4: []
+    delete:
+      parameters:
+      - name: "user_name"
+        in: "query"
+        required: true
+        type: "string"
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /midtier:
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /midtier/company_search:
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /midtier/company_search_elastic:
+    get:
+      parameters:
+      - name: "company_search"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "unique_company"
+        in: "query"
+        required: false
+        type: "string"
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /midtier/export:
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /screeners/custom:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    post:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /screeners/custom/{custom_screener}:
+    get:
+      responses: {}
+      security:
+      - sigv4: []
+    put:
+      responses: {}
+      security:
+      - sigv4: []
+    delete:
+      responses: {}
+      security:
+      - sigv4: []
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+securityDefinitions:
+  sigv4:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+    x-amazon-apigateway-authtype: "awsSigv4"
